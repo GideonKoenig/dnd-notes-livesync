@@ -1,4 +1,8 @@
-# Self-hosted LiveSync
+This fork is modified to be deployed on Coolify. It was build using the implementation from [PanSalut's fork](https://github.com/PanSalut/obsidian-livesync).
+
+For a more detailed guide on how to deploy this on Coolify, please refer to his [README](https://github.com/PanSalut/obsidian-livesync/blob/main/README.md).
+
+# Self-hosted LiveSync - Coolify Deployment
 [Japanese docs](./README_ja.md) - [Chinese docs](./README_cn.md).
 
 
