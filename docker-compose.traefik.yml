@@ -4,15 +4,13 @@
 version: "2.1"
 services:
   couchdb:
-    image: couchdb:latest
+    build: .
     container_name: obsidian-livesync
-    user: 1000:1000
     environment:
       - COUCHDB_USER=username
       - COUCHDB_PASSWORD=password
     volumes:
       - ./data:/opt/couchdb/data
-      - ./local.ini:/opt/couchdb/etc/local.ini
     # Ports not needed when already passed to Traefik
     #ports:
     #  - 5984:5984
