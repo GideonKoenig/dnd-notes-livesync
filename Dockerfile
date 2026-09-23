@@ -1,5 +1,5 @@
 # Use CouchDB as the base image
-FROM couchdb:3.4.2
+FROM couchdb:3.5.2
 
 # Set environment variables
 ENV COUCHDB_USER=admin
