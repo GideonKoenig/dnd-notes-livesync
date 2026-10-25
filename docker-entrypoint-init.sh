@@ -1,10 +1,12 @@
 #!/bin/bash
 set -e
 
+: "${COUCHDB_PASSWORD:?COUCHDB_PASSWORD is required}"
+
 init_couchdb() {
     hostname="http://127.0.0.1:5984"
     username="${COUCHDB_USER:-admin}"
-    password="${COUCHDB_PASSWORD:-admin}"
+    password="${COUCHDB_PASSWORD}"
     AUTH="${username}:${password}"
 
     echo "[init] Waiting for CouchDB to start..."

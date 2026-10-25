@@ -1,9 +1,15 @@
 # Use CouchDB as the base image
-FROM couchdb:3.5.2
+FROM couchdb:3.5.2.1
+
+USER root
+RUN apt-mark hold couchdb \
+    && apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set environment variables
 ENV COUCHDB_USER=admin
-ENV COUCHDB_PASSWORD=admin
 
 # Create necessary directories
 RUN mkdir -p /opt/couchdb/data /opt/couchdb/etc
